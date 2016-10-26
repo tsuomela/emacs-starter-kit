@@ -22,6 +22,17 @@
 ;; http://zpcat.blogspot.com/2013/08/configure-eshell-mode-after-upgrade.html
 (require 'esh-mode)
 
+;; trying to fix org-planning-line-re error
+;; appylying fix from http://orgmode.org/elpa.html, which suggests
+;; initializing packages as soon as possible
+
+;(unless package-archive-contents    ;; Refresh the packages descriptions
+;  (package-refresh-contents))
+;(setq package-load-list '(all))     ;; List of packages to load
+;(unless (package-installed-p 'org)  ;; Make sure the Org package is
+;  (package-install 'org))           ;; installed, install it if not
+(package-initialize)                ;; Initialize & Install Package
+
 ;; Package Locations
 (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
     (let* ((my-lisp-dir "~/.emacs.d/")
