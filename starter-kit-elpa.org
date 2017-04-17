@@ -35,7 +35,6 @@ The following packages will be downloaded and installed.
                                 ;; 'gist
                                 'hl-line+
                                 'idle-highlight-mode
-                                'inf-ruby
                                 'latex-pretty-symbols
                                 ;; 'mac-key-mode
                                 'magit
@@ -50,7 +49,6 @@ The following packages will be downloaded and installed.
                                 'ipython
                                 'jedi
                                 'redo+
-                                ;; 'ruby-mode
                                 'smartparens 
                                 'smex
                                 'solarized-theme
