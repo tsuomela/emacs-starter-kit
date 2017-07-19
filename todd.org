@@ -308,6 +308,26 @@ Polymode is a new package that supports multiple modes inside a single buffer. I
 #+end_src
 
 ** Local Org-mode Settings
+
+*** Capture and Key Bindings
+
+#+source: capture-key-bindings
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
+
+(setq org-capture-templates
+	'(("b" "Book" entry (file+datetree "books.org")
+		"* %^{Title}
+		%^{Author}p
+		%^{Interest}p
+		%?"
+	)) )
+
+#+end_src
+
 *** Smart-quote binding
 When in an org-mode buffer, bind TeX-insert-quote to =C-c "=. Turned off by default. 
 
