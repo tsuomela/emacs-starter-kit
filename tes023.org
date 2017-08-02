@@ -293,10 +293,9 @@ Polymode is a new package that supports multiple modes inside a single buffer. I
 
 (setq org-capture-templates
   '(("b" "Book" entry (file+datetree "books.org")
-  "* %^{Title}
-  %^{Author}p
-  %^{Interest}p
-  %?")))
+         "* %^{Title}  %^{Author}p  %^{Interest}p  %?")
+   ("p" "Person" entry (file+headline "people.org" "Capture")
+         "* %^{Name} %^{Organization}p %^g %?")))
 #+end_src 
 *** Smart-quote binding
 When in an org-mode buffer, bind TeX-insert-quote to =C-c "=. Turned off by default. 
